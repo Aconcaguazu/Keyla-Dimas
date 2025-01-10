@@ -1,0 +1,258 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #FFF7F0;
+  padding: 0 10px; /* Padding untuk mencegah konten melebar ke tepi layar pada perangkat kecil */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('img/header.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 50vh;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #A45029;
+  margin: 0;
+  font-family: 'Times New Roman', serif;
+}
+
+.editor {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Content Section */
+.content {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.synopsis {
+  display: flex;
+  flex-wrap: wrap; /* Membuat elemen dalam synopsis menjadi responsif */
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.cover {
+  width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.synopsis-text {
+  flex: 1;
+}
+
+.synopsis-text h2 {
+  font-size: 2.2rem;
+  color: #A45029;
+  margin-bottom: 15px;
+}
+
+.synopsis-text p {
+  margin: 10px 0 20px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Rating */
+.rating {
+  font-size: 3rem;
+  color: #FFA500;
+  font-weight: bold;
+  text-align: center;
+  border: 4px solid #FFA500;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+/* Gallery Section */
+.gallery {
+  margin-top: 50px;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  color: #A45029;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery-images img {
+  flex: 1;
+  min-width: calc(33.33% - 10px);
+  max-width: calc(33.33% - 10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Spotify-like Player */
+.player {
+  background: #FFF7F0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.progress-bar {
+  background-color: #F4CBA6;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  background-color: #A45029;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  align-items: center;
+}
+
+.controls button {
+  background-color: #A45029;
+  color: #FFF;
+  border: none;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.controls button:hover {
+  background-color: #FFA500;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero {
+      height: 35vh;
+  }
+
+  .title {
+      font-size: 2rem;
+  }
+
+  .synopsis {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .cover {
+      width: 150px;
+  }
+
+  .synopsis-text h2 {
+      font-size: 1.8rem;
+  }
+
+  .synopsis-text p {
+      font-size: 0.95rem;
+  }
+
+  .gallery-images img {
+      min-width: calc(50% - 10px);
+      max-width: calc(50% - 10px);
+  }
+
+  .rating {
+      font-size: 2rem;
+      width: 60px;
+      height: 60px;
+  }
+
+  .player {
+      width: 100%;
+      max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+      height: 30vh;
+  }
+
+  .title {
+      font-size: 1.5rem;
+  }
+
+  .synopsis-text h2 {
+      font-size: 1.5rem;
+  }
+
+  .synopsis-text p {
+      font-size: 0.9rem;
+  }
+
+  .gallery-images img {
+      min-width: 100%;
+      max-width: 100%;
+  }
+
+  .rating {
+      font-size: 1.8rem;
+      width: 50px;
+      height: 50px;
+  }
+}
